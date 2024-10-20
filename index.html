@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsol Power</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Slick Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+<!-- Slick Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        .testimonial-text {
+            font-style: italic;
+            text-align: center;
+            max-width: 600px;
+        }
+        .testimonial-name {
+            font-weight: bold;
+        }
+        .testimonial-company {
+            color: #6c757d;
+        }
+
+        #testimonialCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
+}
+
+.testimonial-card {
+    height: 300px; /* Set a fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align content evenly */
+}
+
+.card-body {
+    flex-grow: 1; /* Allow the card body to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 10px; /* Add margin for spacing */
+}
+
+        /* Styling for the blue heading */
+.blue-heading {
+    color: #007BFF; /* Bootstrap blue or choose another shade */
+}
+
+
+    /* Ensure all carousel images have a fixed height and scale properly */
+    .carousel-item img {
+        height: 400px; /* Adjust based on your preference */
+        object-fit: cover; /* Ensures images are cropped to fit without distortion */
+        width: 100%;
+    }
+
+    /* Responsive font sizes for carousel captions */
+    .carousel-title {
+        font-size: 2rem; /* Default size for large screens */
+    }
+
+    .carousel-text {
+        font-size: 1.25rem; /* Default size for large screens */
+    }
+
+    /* Media queries to adjust for smaller screens */
+    @media (max-width: 768px) {
+        .carousel-item img {
+            height: 400px; /* Smaller height for mobile screens */
+        }
+
+        .carousel-title {
+            font-size: 1.5rem; /* Adjust the font size for smaller screens */
+        }
+
+        .carousel-text {
+            font-size: 1rem; /* Adjust the font size for smaller screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .carousel-item img {
+            height: 300px; /* Further adjust for very small screens */
+        }
+
+        .carousel-title {
+            font-size: 1.25rem;
+        }
+
+        .carousel-text {
+            font-size: 0.9rem;
+        }
+    }
+    body {
+    border: 20px solid #007bff; /* Blue border */
+
+    hr {
+    margin: 20px auto;
+    width: 80%; /* Adjust width */
+    border: 0;
+    border-top: 3px solid #007bff; /* Blue line */
+}
+
+}
+
+
+
+    </style>
+    <style>
+        .partner-slider img {
+            width: 100%; /* Make sure images are responsive */
+            height: 150px; /* Adjust the height as needed */
+            object-fit: contain; /* Ensure images maintain their aspect ratio */
+        }
+    </style>
+    
+</head>
+
+    
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.techsolpower.com/images/techsol-logo.png" alt="Techsol Power Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <!-- Home Carousel -->
+<section id="home" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://www.techsolpower.com/images/slider4.jpg" width="500" height="600">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="carousel-title">Welcome to Techsol Power</h5>
+                <p class="carousel-text">Leading Innovators in Electrical Control Panels and Automation Solutions</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.techsolpower.com/images/slider6.jpg" class="d-block w-100" alt="Expert Solutions">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="carousel-title">Expert Solutions</h5>
+                <p class="carousel-text">Providing top-notch automation solutions tailored to your needs.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://st.depositphotos.com/1570716/4101/i/450/depositphotos_41018917-stock-photo-businessman-push-to-contact-us.jpg" class="d-block w-100" alt="Contact Us">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="carousel-title">Contact Us Today</h5>
+                <p class="carousel-text">Get in touch for customized solutions and expert consultation.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</section>
+<hr>
+
+    <!-- About Us -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="text-primary text-center">About Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Who We Are</h3>
+                    <p>Techsol Power is an esteemed manufacturer and supplier of Power and Automation Control Panels that comprises of Electrical AMF Panels, Electrical PLC Panels, Electrical APFC Panels, Electrical MCC Panels, and Electrical PCC Panels. We are also manufacturing cable trays (Ladder type cable tray & perforated type cable tray).
+                        We offers turnkey solutions for industrial automation, electrical panel fittings and electrical cable laying at any geographic location in India and overseas. We are also providing the service by taking annual maintenance contract of Diesel Generators and electrical control panels.
+</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://www.techsolpower.com/images/turnkey.jpg" class="img-fluid" alt="About Us" style="max-width: 100%; height: auto;">
+
+                </div>
+            </div>
+        </div>
+    </section>
+   <hr>
+    <!-- Products -->
+    <section id="products" class="section py-5">
+        <div class="container">
+            <h2 class="text-primary text-center mb-5">Our Products</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://www.techsolpower.com/images/amf_panel.jpg" class="card-img-top" alt="AMF Panels" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Metering and Auto-Changeover Panel</h5>
+                            <p class="card-text">We offer Metering Panels for residential and commercial buildings for multiple MSEDCL meters
+                                from single feeders to various users. We manufacture metering panel as per MSEDCL rules and
+                                regulations for metering and safety. We offer metering panel as per customer requirement like
+                                nos of flat in residential buildings. Metering panel have provision to mount MSDCL meters with
+                                rated MCB and power wiring and viewing door window to take meter readings..</p>
+                            <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://www.techsolpower.com/images/apfc_panel.jpg" class="card-img-top" alt="APFC Panels" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">APFC Panels</h5>
+                            <p class="card-text">Automatic Power Factor Control (APFC) Panels are critical in modern electrical systems, designed to improve Power Factor (PF) — the ratio of real power (kW) to apparent power (kVA) — which indicates how efficiently power is being used. A low Power Factor can result in increased electricity costs, inefficiencies, and stress on electrical infrastructure, making APFC panels essential for maintaining optimal electrical efficiency.Additionally, low Power Factor increases the load on equipment such as transformers, cables, and switchgear </p>
+                            <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://www.techsolpower.com/images/mcc_panel.jpg" class="card-img-top" alt="PLC & Drive Panels" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">MCC & PLC Panel
+                            </h5>
+                            <p class="card-text">Motor control panels and Prograamble Logic panels are designed as per customer project
+                                requirements, we also use soft starters, VFD in MCC and PLC panels. We have inhouse
+                                programmer for PLC panels. Duly wired with ACB/MCCB/SFU/DOL/STAR-DELTA/ATS Starters.
+                                Various designs provided like single/double front, fixed type, with marshaling terminations.
+                                Cubicle type extensible on each side. Require Control voltage facilities with control. 
+                        </p>
+                            <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<hr>
+    <!-- Cable Tray Section -->
+<section id="cable-tray" class="py-5 bg-light">
+    <div class="container">
+        <!-- Adding a class to style the heading -->
+        <h2 class="text-center mb-4 blue-heading">Cable Tray</h2>
+        <p>We are Cable Tray Manufacturer and Supplier of cable trays as per Client Requirement for various projects. Our cable trays offer a quick, easy, and economical way of installing power and incrementing cable. We are acknowledged for our high-quality Cable trays as per set standards.</p>
+        <p>Our wide range of cable tray products includes Ladder Type Cable Tray and Perforated Cable Tray:</p>
+
+        <!-- Perforated Cable Tray -->
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h4>Perforated Cable Tray</h4>
+                <p>Width is available from 50mm to 1200mm with side walls ranging from 25mm to 150mm. The available finishes include Painted, Powder Coated, Epoxy Coated, and Hot Dip Galvanized. These trays are manufactured using materials like Iron Sheets, Mill Galvanized Sheets, Aluminium Sheets, and Stainless Steel, ensuring durability and strength for various applications.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <!-- Image for Perforated Cable Tray -->
+                <img src="https://www.techsolpower.com/images/perforated.jpg" alt="Perforated Cable Tray" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <!-- Ladder Type Cable Tray -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-6">
+                <h4>Ladder Type Cable Tray</h4>
+                <p>Width is available from 75mm to 1500mm with side walls from 40mm to 150mm. The rungs range from 30mm to 75mm. Finishes available for Ladder Type Cable Trays include Painted, Powder Coated, Epoxy Coating, and Hot Dip Galvanized. These trays are crafted from Iron Sheets, Mill Galvanized Sheets, and Aluminium Sheets to meet diverse industrial needs.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <!-- Image for Ladder Type Cable Tray -->
+                <img src="https://www.techsolpower.com/images/ladder.jpg" alt="Ladder Type Cable Tray" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="text-primary text-center">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://engeso.com/wp-content/uploads/2022/04/turnkey-projects-for-air-conditioning-500x500-500x500-1.jpg" class="card-img-top" alt="Turnkey Solutions" style="object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title">Turnkey Solutions</h5>
+                            <p class="card-text">Complete solutions for industrial automation, panel fittings, and cable laying.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://www.balajiengineers.in/balaji-engineers/services-we-offer/electrical-panel-maintenance/electrical-pannel-maintainance.jpg" class="card-img-top" alt="Maintenance Services" style="object-fit: contain;">
+                        <div class="card-body">
+                            <h5 class="card-title">Maintenance Services</h5>
+                            <p class="card-text">Regular maintenance and repair services to ensure the reliability of your systems.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://www.levenbert.com/wp-content/uploads/2021/04/business-consultants.jpg" class="card-img-top" alt="Consultation Services">
+                        <div class="card-body">
+                            <h5 class="card-title">Consultation Services</h5>
+                            <p class="card-text">Expert advice and support for optimizing your electrical control systems.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<hr>
+  <!-- Customer Testimonials -->
+<section id="testimonials" class="section bg-light">
+    <div class="container">
+        <h2 class="text-primary text-center">What Our Customers Say</h2>
+        <div class="row" id="testimonialCards">
+            <!-- Testimonial Card 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4 testimonial-card">
+                    <div class="card-body text-center">
+                        <p class="testimonial-text">"Techsol Power has been an invaluable partner in our automation journey. Their solutions are top-notch!"</p>
+                        <h5 class="card-title">"Rajesh Sir"</h5>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Card 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 testimonial-card">
+                    <div class="card-body text-center">
+                        <p class="testimonial-text">"Their expertise in electrical control panels is unmatched. Highly recommend Techsol Power!"</p>
+                        <h5 class="card-title">"Prasad Suthar"</h5>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Card 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 testimonial-card">
+                    <div class="card-body text-center">
+                        <p class="testimonial-text">"The team at Techsol Power delivered exactly what we needed, on time and within budget."</p>
+                        <h5 class="card-title">"Vivek Bhat"</h5>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button id="load-more" class="btn btn-primary">Load More</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<hr>
+
+    <!-- Existing content -->
+
+<!-- Our Esteemed Customers Section -->
+<section id="esteemed-customers" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #007bff;">Our Esteemed Customers</h2>
+        <div class="customer-slider">
+            <!-- Customer Cards -->
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">RBI Bank Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Virgo Valves and Controls Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Reactronics Devises and Systems Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Rubix Automation Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Exotech Zanini Industries Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Niktish Filtration & Protection Pvt Ltd Satara</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Konecranes & Demag Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Pride Builders LLP Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Rohan Builders Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Rainbow Housing Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Suyog Developers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Runal Developers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Calyx Group Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Sarthak Group Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Abhinav Group Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Pinnacle Group Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Gaikwad Shinde Associates Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Viney Corporation Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Quartz Enterprises HUF Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Haldankar Infra Solution Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">VRF Aircon Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">GS Power Systems Nashik</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Bhagyshree Electricals Nashik</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Extreme Automation Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">New Aquaria Electech Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Urja Udyog Nashik</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Airtech Systems Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Prime Engineering Aurangabad</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Aquachil Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Forbes Marshall Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Sai Electricals Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Harshal Gardens Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Krisna Nirmaan Skyscraper LLP Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Xrbia Developers Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Rohan Builders India Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">ATS Conveyors India Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Radiant Engineers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Vedant Estate & Properties Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Sarthi Group of Companys Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">SL Electricals Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Rohan Power Control Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Dairy Powertech Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Sunguard Builders LLP Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Jaikul Associates Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Empower Contracting & Services Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Shubhankar Associates Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Rainbow Developers & Promoters LLP Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Devmangal Engineers & Consultant</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">RP Properties Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Dake Electricals Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Fidesto Projects Pvt Ltd</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Veritas Constructions</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Vedant Landmarks</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Kingsbury Co-Operative Hsg Soc Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Five Star Shelters Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Tech India Electrosolutions Pvt Ltd Mumbai</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Vista Projects Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Kothari Cars Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Avani Corp Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Gayatri Construction Services Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Hrutvin Lifespace LLP Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">BVG Developers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Munisuvrat Properties Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Sankalp Contracts Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Shah Construction Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">AMP Electricals Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Malnad Projects India Pvt Ltd Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Karmasankalap Infra Developers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Mahadev Electricals Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Deepa Engineering Works Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">YAD Enterprises Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Belwalkar Housing Schemes Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Shiv Developers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Tirupati Construction Latur</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Axis Power Engineers Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Tanaji Rambhau Gawade HUF Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Abhikalpan Architects & Planners Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Laxmi Construction Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">KCS Electrical Works Mumbai</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Swami Vivekanand Patpedhi Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Sahoo Electrical Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Urban Life Ventures Pune</p>
+                </div>
+            </div>
+            <div class="card border-light shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">Shree Shankeshwar Highrisers Pvt Ltd Pune</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4">...and many more esteemed customers.</p>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    
+    <!-- Include Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    
+    <!-- Custom CSS for Equal Image Sizes -->
+    <style>
+        .partner-slider .partner-image {
+            width: 100%;
+            height: 150px; /* Fixed height for uniformity */
+            object-fit: contain; /* Ensures the image fits without distortion */
+        }
+        .slick-slide {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<hr>
+    <!-- Other sections of your website -->
+
+    <!-- Partners Section -->
+    <section id="partners" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #007bff;">Our Partners</h2>
+            <div class="partner-slider">
+                <!-- Partner Images -->
+                <div><img src="https://www.techsolpower.com/images/client/rainbow.jpg" alt="Partner 1" class="img-fluid partner-image"></div>
+                <div><img src="https://www.techsolpower.com/images/client/gsps.jpg" alt="Partner 2" class="img-fluid partner-image"></div>
+                <div><img src="https://www.techsolpower.com/images/client/rohan.jpg" alt="Partner 3" class="img-fluid partner-image"></div>
+                <div><img src="https://www.techsolpower.com/images/client/mak.jpg" alt="Partner 4" class="img-fluid partner-image"></div>
+                <div><img src="https://www.techsolpower.com/images/client/hager.jpg" alt="Partner 5" class="img-fluid partner-image"></div>
+                <div><img src="https://www.techsolpower.com/images/client/perennial.jpg" alt="Partner 6" class="img-fluid partner-image"></div>
+                <div><img src="https://www.techsolpower.com/images/client/konnet.jpg" alt="Partner 7" class="img-fluid partner-image"></div>
+            </div>
+        </div>
+    </section>
+<hr>
+    <!-- Include jQuery (if not already included) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Slick Slider Initialization -->
+    <script>
+        $(document).ready(function(){
+            $('.partner-slider').slick({
+                slidesToShow: 4,  /* Number of slides visible at once */
+                slidesToScroll: 1,  /* Number of slides to scroll at a time */
+                autoplay: true,  /* Enables autoplay */
+                autoplaySpeed: 2000,  /* Speed of autoplay in milliseconds */
+                arrows: true,  /* Display next/prev arrows */
+                dots: false,  /* Enable/disable navigation dots */
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- Features with Icons Section -->
+<section id="features-icons" class="section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-primary text-center mb-4">Why Choose Us</h2>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="feature-icon p-4">
+                    <i class="fas fa-award fa-3x text-primary mb-3"></i>
+                    <h5>High Quality</h5>
+                    <p>We deliver only the best quality products and services, ensuring your satisfaction.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-icon p-4">
+                    <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
+                    <h5>Fast Delivery</h5>
+                    <p>Our efficient processes ensure you get your orders on time, every time.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-icon p-4">
+                    <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
+                    <h5>Innovative Solutions</h5>
+                    <p>We embrace the latest technologies to provide cutting-edge solutions for your needs.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-icon p-4">
+                    <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                    <h5>Customer-Centric Approach</h5>
+                    <p>We put our customers first, ensuring personalized services that exceed expectations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function(){
+        $('.partner-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+
+<!-- Rest of the content -->
+<hr>
+    <!-- FAQ -->
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <h2 class="text-primary text-center">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is Techsol Power's expertise?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Techsol Power specializes in designing and manufacturing electrical control panels and automation solutions for various industrial applications.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Do you offer customization services?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer customization services to meet your specific requirements and ensure that our solutions fit your needs perfectly.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How can I contact Techsol Power?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can contact us through the contact form on our website, by email at info@techsolpower.com, or by phone at (123) 456-7890.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<hr>
+    <!-- Contact -->
+<section id="contact" class="section py-5">
+    <div class="container">
+        <h2 class="text-primary text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <!-- Address and Map -->
+            <div class="col-md-6">
+                <h4 class="mb-3">Our Address</h4>
+                <p class="mb-2">Techsol Power
+                    S.No 79/2, behind Aditya Hotel, Shivane, Pune, Maharashtra 411023</p>
+                <p class="mb-4">Email: <a href="techsolpower@gmail.com">techsolpower@gmail.com</a><br>Phone: <a href="9423585429"</a> 9423585429</p>
+                <div class="map-container" style="position: relative; height: 450px; width: 100%;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8347148942275!2d73.79178226283604!3d18.469419403156845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2960fffffffff%3A0x56eb10531cf0bb0b!2sTechsol%20Power!5e0!3m2!1sen!2sin!4v1726459376430!5m2!1sen!2sin" 
+                        style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Techsol Power. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a> | 
+                <a href="#about">About Us</a> | 
+                <a href="#products">Products</a> | 
+                <a href="#services">Services</a> | 
+                <a href="#testimonials">Testimonials</a> | 
+                <a href="#blog">Blog</a> | 
+                <a href="#faq">FAQ</a> | 
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+   <!-- Bootstrap JavaScript and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+</body>
+</html>
